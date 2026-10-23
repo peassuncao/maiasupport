@@ -17,7 +17,7 @@ class MaiaEncodingTest {
     @Test fun blackToMoveMirrorsRanksAndColors() {
         val tokens = MaiaEncoding.encodeFen("rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR b KQkq - 0 1")
         assertEquals(1f, tokens[3], 0f) // original black rook becomes oriented white rook on a1
-        assertEquals(1f, tokens[56 * 12 + 6 + 3], 0f) // original white rook becomes black rook on a8
+        assertEquals(1f, tokens[56 * 97 + 9], 0f) // white rook mirrored to black rook on a8
     }
 
     @Test fun moveIndicesMatchMaiaMoveVocabulary() {
